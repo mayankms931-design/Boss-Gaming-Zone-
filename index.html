@@ -3,53 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boss Gaming Zone Hub</title>
+    <title>Boss Gaming Zone Hub | Live</title>
     <style>
-        body { background-color: #050505; color: #fff; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
-        header { background: linear-gradient(90deg, #ff0055, #7000ff); padding: 40px; box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
-        h1 { margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
-        .game-card { background: #111; border: 1px solid #333; border-radius: 15px; width: 280px; margin: 15px; padding: 20px; transition: 0.3s; }
-        .game-card:hover { border-color: #7000ff; transform: translateY(-10px); box-shadow: 0 0 20px rgba(112, 0, 255, 0.3); }
-        .game-card h3 { color: #00d2ff; }
-        .btn { display: inline-block; background: #25D366; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
-        .btn:active { transform: scale(0.95); }
+        body { background-color: #050505; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; overflow-x: hidden; }
+        
+        /* Scrolling News Ticker */
+        .ticker { background: #ff0055; color: white; padding: 10px 0; font-weight: bold; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        marquee { font-size: 1rem; }
+
+        header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 80px 20px 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.8); border-bottom: 2px solid #7000ff; }
+        h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; text-shadow: 0 0 15px #7000ff; }
+
+        /* Live Clock */
+        #clock { font-size: 1.2rem; color: #00d2ff; margin-top: 10px; font-family: monospace; }
+
+        .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 40px 20px; }
+        .game-card { background: rgba(255,255,255,0.05); border: 1px solid #333; border-radius: 20px; width: 300px; margin: 20px; padding: 25px; backdrop-filter: blur(5px); transition: 0.4s; }
+        .game-card:hover { border-color: #ff0055; transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 0, 85, 0.2); }
+        
+        .btn { display: inline-block; background: #25D366; color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
     </style>
 </head>
-<body>
+<body onload="updateClock()">
+
+<div class="ticker">
+    <marquee scrollamount="8">🔥 धमाका टूर्नामेंट कल शाम 4 बजे! | 🏆 प्राइज पूल ₹1000 | 📢 रजिस्टर करने के लिए नीचे दिए गए बटन पर क्लिक करें! | 🎮 Boss Gaming Zone में आपका स्वागत है!</marquee>
+</div>
 
 <header>
     <h1>BOSS GAMING ZONE HUB</h1>
-    <p>आपका अपना गेमिंग अंपायर!</p>
+    <div id="clock">Loading Time...</div>
+    <p style="color: #aaa;">लिमिटलेस गेमिंग, बिना किसी रुकावट के!</p>
 </header>
 
 <div class="container">
     <div class="game-card">
-        <h3>Free Fire Max</h3>
-        <p>अगला टूर्नामेंट: कल शाम 4 बजे</p>
+        <h2 style="color: #00d2ff;">Free Fire Max</h2>
+        <p>अगला टूर्नामेंट: कल शाम 4:00 PM</p>
         <p>प्राइज: ₹1000</p>
-        <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20register%20for%20Free%20Fire%20Tournament" class="btn">WhatsApp पर रजिस्टर करें</a>
+        <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20register%20for%20Free%20Fire" class="btn">अभी रजिस्टर करें</a>
     </div>
 
     <div class="game-card">
-        <h3>BGMI / PUBG</h3>
+        <h2 style="color: #ff4400;">BGMI / PUBG</h2>
         <p>डेली कस्टम रूम्स</p>
         <p>प्राइज: ₹500</p>
-        <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20join%20BGMI%20Room" class="btn" style="background: #ff4400;">WhatsApp से रूम जॉइन करें</a>
+        <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20join%20BGMI%20Room" class="btn" style="background: #ff4400;">रूम जॉइन करें</a>
     </div>
 
     <div class="game-card">
-        <h3>Ludo King</h3>
+        <h2 style="color: #ffcc00;">Ludo King</h2>
         <p>1 vs 1 चैलेंज</p>
         <p>एंट्री: ₹20</p>
-        <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20play%20Ludo%20Challenge" class="btn" style="background: #ffcc00; color: #000;">WhatsApp पर चैलेंज भेजें</a>
+        <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20play%20Ludo" class="btn" style="background: #ffcc00; color: #000;">चैलेंज भेजें</a>
     </div>
 </div>
 
-<div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 20px;">
-    <p>किसी भी गेम को जोड़ने के लिए Boss से संपर्क करें।</p>
-    <p style="color: #ff0055; font-size: 0.8rem;">Created by Boss | Powered by Alp</p>
-</div>
+<footer style="padding: 40px; border-top: 1px solid #333; background: #0a0a0a; color: #666;">
+    <p>Created by **Boss** | Powered by **Alp**</p>
+</footer>
+
+<script>
+    function updateClock() {
+        var now = new Date();
+        var time = now.getHours() + ":" + (now.getMinutes()<10?'0':'') + now.getMinutes() + ":" + (now.getSeconds()<10?'0':'') + now.getSeconds();
+        document.getElementById('clock').innerHTML = "Live Time: " + time;
+        setTimeout(updateClock, 1000);
+    }
+</script>
 
 </body>
 </html>
+
