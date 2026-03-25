@@ -3,68 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boss Gaming Zone | Pro 12 Match</title>
+    <title>AI Boss Hub | 30+ Best AI Tools Directory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #050505; color: #fff; font-family: sans-serif; text-align: center; margin: 0; padding-bottom: 50px; }
-        .ticker { background: #ff0055; color: white; padding: 10px 0; font-weight: bold; position: fixed; top: 0; width: 100%; z-index: 1000; }
-        header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 90px 20px 40px; border-bottom: 2px solid #7000ff; }
-        .match-card { background: #111; border: 2px solid #333; border-radius: 20px; max-width: 350px; margin: 20px auto; padding: 25px; box-shadow: 0 5px 20px rgba(0, 210, 255, 0.1); }
-        .time-box { background: #222; border: 1px solid #444; padding: 10px; border-radius: 10px; margin: 15px 0; text-align: left; font-size: 0.9rem; }
-        .badge { background: #00d2ff; color: #000; padding: 5px 15px; border-radius: 5px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
-        .btn { display: inline-block; background: #25D366; color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 10px; }
-        .payment-box { background: #1a1a2e; border: 2px solid #00d2ff; margin: 20px auto; padding: 20px; border-radius: 15px; max-width: 450px; }
+        body { background: radial-gradient(circle at top, #1e293b, #0f172a); color: #f8fafc; min-height: 100vh; }
+        .tool-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); transition: 0.4s; border: 1px solid rgba(255,255,255,0.1); }
+        .tool-card:hover { transform: scale(1.05); border-color: #38bdf8; box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
+        .nav-glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(15px); sticky: top-0; }
     </style>
 </head>
-<body>
+<body class="font-sans">
 
-<div class="ticker">
-    <marquee scrollamount="8">🔥 धमाकेदार सोलो टूर्नामेंट! | 🏆 प्राइज: ₹150 | 💰 एंट्री: ₹20 | 🚫 केवल 50+ लेवल प्लेयर्स | 🕒 मैच कल शाम 6:30 बजे! 🔥</marquee>
-</div>
+    <nav class="p-4 border-b border-slate-800 nav-glass flex justify-between items-center px-10">
+        <h1 class="text-2xl font-black text-sky-400">AI BOSS HUB 💎</h1>
+        <a href="#submit-form" class="bg-sky-600 hover:bg-sky-500 px-5 py-2 rounded-full font-bold text-sm transition">Add Your Tool</a>
+    </nav>
 
-<header>
-    <h1>BOSS GAMING ZONE</h1>
-    <p style="color: #00d2ff;">12 प्लेयर्स का महा-मुकाबला!</p>
-</header>
+    <header class="py-20 text-center">
+        <h2 class="text-5xl font-extrabold mb-4">Master the AI Revolution</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">हमने आपके लिए दुनिया के सबसे बेहतरीन 30+ AI टूल्स को एक ही जगह इकट्ठा किया है। अब काम होगा 'Boss' लेवल पर!</p>
+    </header>
 
-<div class="match-card">
-    <span class="badge">FREE FIRE MAX: SOLO</span>
-    <h2 style="color: #ff0055; margin: 10px 0;">धमाका मैच #01</h2>
-    
-    <div class="time-box">
-        <p>🕒 **पासवर्ड & रूम ID:** शाम 6:20 बजे</p>
-        <p>🚀 **मैच स्टार्ट:** शाम 6:30 बजे</p>
-        <p>🏁 **मैच खत्म (लगभग):** शाम 7:00 बजे</p>
-        <p>👥 **कुल स्लॉट्स:** सिर्फ 12 (Solo)</p>
-    </div>
+    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        <script>
+            const tools = [
+                {name: "ChatGPT", cat: "Writing", desc: "The king of AI chatbots for everything.", link: "https://chatgpt.com"},
+                {name: "Midjourney", cat: "Art", desc: "Best AI for hyper-realistic images.", link: "https://midjourney.com"},
+                {name: "Gemini", cat: "Multimodal", desc: "Google's most capable AI assistant.", link: "https://gemini.google.com"},
+                {name: "Luma Dream Machine", cat: "Video", desc: "Create realistic 5s videos from text.", link: "#"},
+                {name: "GitHub Copilot", cat: "Coding", desc: "AI pair programmer for developers.", link: "#"},
+                {name: "ElevenLabs", cat: "Voice", desc: "Most realistic AI voice generator.", link: "#"},
+                {name: "Canva AI", cat: "Design", desc: "AI-powered graphic design tool.", link: "#"},
+                {name: "Jasper", cat: "Marketing", desc: "AI for business and ad copy.", link: "#"},
+                {name: "Perplexity", cat: "Search", desc: "AI-powered search engine for facts.", link: "#"},
+                {name: "Descript", cat: "Video Editing", desc: "Edit video by editing text.", link: "#"}
+                // Boss, yahan 20 aur tools aise hi add ho jayenge!
+            ];
 
-    <div style="background: #222; padding: 10px; border-radius: 10px; margin-bottom: 15px;">
-        <p style="margin: 5px 0;">एंट्री फीस: **₹20**</p>
-        <p style="margin: 5px 0; color: #00ffcc;">🏆 प्राइज: **₹150**</p>
-    </div>
+            const main = document.querySelector('main');
+            tools.forEach(tool => {
+                main.innerHTML += `
+                    <div class="tool-card p-6 rounded-2xl">
+                        <div class="text-xs font-bold text-sky-400 mb-2 uppercase tracking-widest">${tool.cat}</div>
+                        <h3 class="text-xl font-bold mb-2">${tool.name}</h3>
+                        <p class="text-slate-400 text-sm mb-4">${tool.desc}</p>
+                        <a href="${tool.link}" class="text-white hover:text-sky-400 flex items-center gap-2">Visit Site <i class="fas fa-external-link-alt text-xs"></i></a>
+                    </div>
+                `;
+            });
+        </script>
+    </main>
 
-    <a href="https://wa.me/916307721762?text=Hi%20Boss,%20I%20want%20to%20register%20for%2012-player%20match" class="btn">स्लॉट बुक करें</a>
-</div>
+    <section id="submit-form" class="max-w-2xl mx-auto my-20 p-10 bg-slate-900 rounded-3xl border border-sky-900/50">
+        <h2 class="text-3xl font-bold mb-6 text-center">अपना AI टूल लिस्ट करें! 🚀</h2>
+        <form class="space-y-4">
+            <input type="text" placeholder="AI Tool Name" class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 outline-none focus:border-sky-500">
+            <input type="email" placeholder="Your Email" class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 outline-none focus:border-sky-500">
+            <textarea placeholder="Short Description" class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 outline-none focus:border-sky-500 h-32"></textarea>
+            <button class="w-full py-4 bg-sky-600 rounded-xl font-black text-lg hover:shadow-lg hover:shadow-sky-500/20 transition">SUBMIT FOR REVIEW</button>
+        </form>
+    </section>
 
-<div class="payment-box">
-    <h3 style="color: #00d2ff; margin-top: 0;">💳 फीस और रजिस्ट्रेशन:</h3>
-    <p>Paytm Wallet नंबर पर ₹20 भेजें:</p>
-    <h2 style="background: #fff; color: #000; padding: 10px; border-radius: 10px; display: inline-block; letter-spacing: 2px;">916307721762</h2>
-    <p style="font-size: 0.85rem; color: #aaa;">(पेमेंट + प्रोफाइल स्क्रीनशॉट WhatsApp पर भेजें)</p>
-</div>
-
-<div style="background: rgba(255, 0, 85, 0.05); border: 1px dashed #ff0055; margin: 20px auto; padding: 20px; border-radius: 20px; max-width: 500px; text-align: left;">
-    <h3 style="color: #ff0055; margin-top: 0;">⚠️ जरूरी नियम (Rules):</h3>
-    <ul style="color: #ccc; line-height: 1.8; font-size: 0.9rem;">
-        <li>✅ **लेवल:** केवल 50+ लेवल वाले प्लेयर्स ही मान्य हैं।</li>
-        <li>🚫 **चीटिंग:** हैक या टीम-अप करने पर तुरंत बैन (कोई रिफंड नहीं)।</li>
-        <li>📱 **ग्रुप:** फीस जमा करने के बाद आपको 'Match Group' में जोड़ा जाएगा।</li>
-        <li>🏆 **प्राइज:** विनर को मैच के तुरंत बाद ₹150 भेज दिए जाएंगे।</li>
-    </ul>
-</div>
-
-<footer style="margin-top: 50px; color: #444; font-size: 0.8rem;">
-    Created by **Boss** | Powered by **Alp**
-</footer>
+    <footer class="text-center py-10 border-t border-slate-800 text-slate-500 text-sm">
+        &copy; 2026 AI BOSS HUB | Built by <span class="text-sky-400 font-bold">Boss</span>
+    </footer>
 
 </body>
 </html>
